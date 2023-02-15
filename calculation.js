@@ -39,7 +39,23 @@ document.getElementById("panda-btn").addEventListener("click",function(){
  document.getElementById("vue-btn").addEventListener("click",function(){
     const name= getName("vue-title");
     const price=getFieldValue("vue-price");
+    if(price<0){
+        alert("only positive value is accepted");
+        return;
+    }
+    if(isNaN(price)){
+        alert("put valid input");
+        return;
+    }
     const quantity=getFieldQuantity("vue-quantity");
+    if(quantity<0){
+        alert("only positive value is accepted");
+        return;
+    }
+    if(isNaN(quantity)){
+        alert("put valid input");
+        return;
+    }
     const total=getTotal(price,quantity,1)
     count++;
     setTableValue(count,name,price,quantity,total);

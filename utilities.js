@@ -6,8 +6,18 @@ function getValue(id){
     value=parseInt(value);
     return value;
 }
+function getFieldValue(id){
+    let value= document.getElementById(id).value;
+    value=parseInt(value);
+    return value;
+}
 function getQuantity(id){
     let quantity= document.getElementById(id).innerHTML;
+    quantity=parseInt(quantity);
+    return quantity;
+}
+function getFieldQuantity(id){
+    let quantity= document.getElementById(id).value;
     quantity=parseInt(quantity);
     return quantity;
 }

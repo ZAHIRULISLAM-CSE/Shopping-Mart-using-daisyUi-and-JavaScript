@@ -1,3 +1,15 @@
+function buttonEventHandle(iDTitle,idPrice,idQuantity,idBtn,totalPrice){
+    const name= getName(iDTitle);
+    const price=getValue(idPrice);
+    const quantity=getQuantity(idQuantity);
+    const total=getTotal(price,quantity,1)
+    count++;
+    setTableValue(count,name,price,quantity,total);
+    setDisable(idBtn);
+    let totalPrices=getValue(totalPrice);
+    totalPrices=totalPrices+total;
+    document.getElementById(totalPrice).innerHTML=totalPrices;
+}
 function getName(id){
    return document.getElementById(id).innerHTML;
 }

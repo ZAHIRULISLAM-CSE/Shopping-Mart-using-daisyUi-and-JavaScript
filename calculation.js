@@ -1,40 +1,15 @@
 let count=0;
 document.getElementById("heart-btn").addEventListener("click",function(){
-   const name= getName("heart-title");
-   const price=getValue("heart-price");
-   const quantity=getQuantity("heart-quantity");
-   const total=getTotal(price,quantity,1)
-   count++;
-   setTableValue(count,name,price,quantity,total);
-   setDisable("heart-btn");
+buttonEventHandle("heart-title","heart-price","heart-quantity","heart-btn","total-price");
 })
-
 document.getElementById("coffee-btn").addEventListener("click",function(){
-   const name= getName("coffee-title");
-   const price=getValue("coffee-price");
-   const quantity=getQuantity("coffee-quantity");
-   const total=getTotal(price,quantity,1)
-   count++;
-   setTableValue(count,name,price,quantity,total);
-   setDisable("coffee-btn");
+buttonEventHandle("coffee-title","coffee-price","coffee-quantity","coffee-btn","total-price");
 })
 document.getElementById("panda-btn").addEventListener("click",function(){
-    const name= getName("panda-title");
-    const price=getValue("panda-price");
-    const quantity=getQuantity("panda-quantity");
-    const total=getTotal(price,quantity,1)
-    count++;
-    setTableValue(count,name,price,quantity,total);
-    setDisable("panda-btn");
+buttonEventHandle("panda-title","panda-price","panda-quantity","panda-btn","total-price");
  })
  document.getElementById("umbrella-btn").addEventListener("click",function(){
-    const name= getName("umbrella-title");
-    const price=getValue("umbrella-price");
-    const quantity=getQuantity("umbrella-quantity");
-    const total=getTotal(price,quantity,1)
-    count++;
-    setTableValue(count,name,price,quantity,total);
-    setDisable("umbrella-btn");
+buttonEventHandle("umbrella-title","umbrella-price","umbrella-quantity","umbrella-btn","total-price");
  })
  document.getElementById("vue-btn").addEventListener("click",function(){
     const name= getName("vue-title");
@@ -60,5 +35,9 @@ document.getElementById("panda-btn").addEventListener("click",function(){
     count++;
     setTableValue(count,name,price,quantity,total);
     setDisable("vue-btn");
-
+    let totalPrice=getValue("total-price");
+    totalPrice=totalPrice+total;
+    document.getElementById("total-price").innerHTML=totalPrice;
 })
+
+ 
